@@ -1,0 +1,157 @@
+.navbar {
+  /* border: #00ced1 solid 2px; */
+  display: flex;
+  width: 90%;
+  height: 120px;
+  left: 5%;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/* ====================
+========Logo============
+==================== */
+
+.brand-title {
+  margin: 1rem;
+  height: 100px;
+}
+
+/* ====================
+====Burger Menu=====
+==================== */
+.toggle-button {
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* =============================
+====Nav Bar Menu Main Links=====
+============================== */
+.navbar_menu_options {
+  /* border: solid purple 2pt; */
+  display: flex;
+  margin-right: 20px;
+}
+
+#navbar-links {
+  padding: 15px;
+  margin: auto;
+}
+
+#navbar-links a {
+  /* border: solid greenyellow 2px; */
+  text-decoration: none;
+  color: #354463;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: komet, sans-serif;
+  font-weight: 400;
+}
+
+.navbarLi:hover {
+  position: relative;
+  padding: 5px;
+  background-color: #c1f7d5;
+  /* display: inline-block; */
+}
+
+/* =============================
+==========Nav Bar sub Links=====
+============================== */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 90px;
+  background-color: #f5f5f5;
+  z-index: 5;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #354463;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+}
+
+.dropdown-content a:hover {
+  background-color: #c1f7d5;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* =============================
+==========Donate Button=========
+============================== */
+.navbar-button {
+  /* border: solid red 2px; */
+  border-radius: 25px;
+  background-color: #c1f7d5;
+  margin: auto;
+  text-decoration: none;
+  padding: 15px 30px;
+  color: #354463;
+  font-family: PoynterOSDisp, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =============================
+==========Media Queries=========
+============================== */
+@media (max-width: 1100px) {
+  .toggle-button {
+    display: flex;
+  }
+  #navbar-links {
+    display: none;
+  }
+
+  .navbar-button {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #navbar-links li {
+    text-align: center;
+  }
+
+  #navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  #navbar-links.active {
+    display: flex;
+  }
+}
