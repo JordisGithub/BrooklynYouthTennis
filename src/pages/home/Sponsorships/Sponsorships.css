@@ -1,0 +1,76 @@
+.sponsorships{
+  background-image: url('../../../../../Assets/HomePageImages/sponsorships.png');
+  width: 100vw;
+  height: 800px;
+  background-size: cover;
+  padding-top: 80px;
+}
+
+.sponsorships_title{
+  /* display: table-cell; */
+  vertical-align: middle;
+  font-family: "komet", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #354463;
+  background-color: white;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: auto;
+  width: 210px;
+  
+}
+
+.sponsorships_description{
+  font-family: "PoynterOSDisp", sans-serif;
+  font-size: 44pt;
+  color: white;
+  width: 80%;
+  margin: auto;
+  margin-top: 60px;
+  background-color: #354463;
+  opacity: .5;
+  padding: 40px;
+}
+
+.sponsorships_logos{
+  /* border: solid red 2pt; */
+display: flex;
+justify-content: space-evenly;
+width: 90%;
+margin: auto;
+margin-top: 40px;
+}
+
+.sponsor1 {
+background-image: url('../../../../../Assets/HomePageImages/sponsor2.png');
+width: 150px;
+height: 150px;
+/* display: flex; */
+}
+
+/* .sponsor2 {
+  background-image: url('../../Assets/sponsor2.png');
+  width: 150px;
+height: 150px;
+} */
+
+.sponsor3 {
+  background-image: url('../../../../../Assets/HomePageImages/sponsor3.png');
+  width: 150px;
+height: 150px;
+}
+
+.sponsor4 {
+  background-image: url('../../../../../Assets/HomePageImages/sponsor4.png');
+  width: 150px;
+height: 150px;
+}
+
+.sponsor5 {
+  background-image: url('../../../../../Assets/HomePageImages/sponsor5.png');
+  width: 150px;
+height: 150px;
+}

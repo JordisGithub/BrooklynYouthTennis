@@ -1,0 +1,84 @@
+.Impact {
+  background-color: #354463;
+}
+
+.Impact_heading {
+  /* border: solid white 2px; */
+  font-family: Flood Std, sans-serif;
+  font-size: 72px;
+  color: white;
+  padding: 100px 0;
+  width: 80%;
+  margin: auto;
+}
+
+.Impact_Img {
+  background-image: url(../../../images/impact.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 771px;
+  height: 464px;
+
+  margin-left: 10%;
+}
+
+.Impact_grid {
+  /* border: solid white 2px; */
+  display: grid;
+  grid-template-columns: 35vw 35vw;
+  grid-template-rows: auto auto;
+  grid-gap: 100px;
+  width: 80%;
+  margin: auto;
+
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.Impact_grid_college {
+  /* font-family: Flood Std, sans-serif;
+  font-size: 72px;
+  color: white; */
+}
+
+.Impact_grid_college h1 {
+  font-family: Flood Std, sans-serif;
+  font-size: 60px;
+  color: white;
+  font-weight: 400;
+  margin: 100px 0 50px;
+}
+
+.Impact_grid_college p {
+  font-family: komet, sans-serif;
+  font-size: 24px;
+  color: #354463;
+  font-weight: 400;
+  background-color: white;
+  line-height: 30px;
+  padding: 30px;
+}
+
+.Impact_grid_college li {
+  list-style-type: none;
+  margin: 8px 0;
+}
+
+.Impact_grid_athletes h1 {
+  font-family: Flood Std, sans-serif;
+  font-size: 56px;
+  color: white;
+  font-weight: 400;
+  margin: 50px 0 0 100px;
+  /* line-height: 25px; */
+}
+
+.Impact_grid_athletes p {
+  font-family: komet, sans-serif;
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  /* background-color: white; */
+  line-height: 38px;
+  padding: 50px;
+}

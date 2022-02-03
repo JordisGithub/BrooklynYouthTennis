@@ -1,0 +1,106 @@
+.programs {
+  background-color: #354463;
+  padding: 100px;
+}
+
+.programs_title {
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  top: -15px;
+  font-family: "komet", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #354463;
+  background-color: white;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.programs_description {
+  color: #ffffff;
+  font-family: "PoynterOSDisp", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 30px;
+  width: 70vw;
+  margin-bottom: 60px;
+}
+
+.programs_grid {
+  /* border: solid 2px brown; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
+  width: 75%;
+  margin: auto;
+}
+
+.programs_grid_card {
+  /* border: solid 2px yellow; */
+  height: 540px;
+  background-color: white;
+  display: grid;
+}
+
+.programs_grid_card h1 {
+  /* border: solid 2px sandybrown; */
+  font-family: "PoynterOSDisp", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  width: 94%;
+  margin: auto;
+  margin-right: 0;
+  color: #354463;
+}
+
+.programs_grid_card p {
+  /* border: solid 2px red; */
+  font-weight: 300;
+  font-family: "komet", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  width: 90%;
+  margin: auto;
+  margin-right: 0;
+  height: 150px;
+  padding-right: 10px;
+  line-height: 25px;
+  color: #354463;
+  /* margin-left: 0; */
+}
+
+.programs_gridcard_button {
+  border-radius: 25px;
+  background-color: #c1f7d5;
+  margin: auto;
+  text-decoration: none;
+  padding: 15px 30px;
+  color: #354463;
+  font-family: PoynterOSDisp, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.afterschool_img {
+  background-image: url("../../../images/afterschool_img.png");
+  width: 320px;
+  height: 224px;
+  /* margin-left: 50px; */
+}
+
+.community_img {
+  background-image: url("../../../images/community_img.png");
+  width: 320px;
+  height: 224px;
+}
+
+.tournament_img {
+  background-image: url("../../../images/tournament_img.png");
+  width: 320px;
+  height: 224px;
+}

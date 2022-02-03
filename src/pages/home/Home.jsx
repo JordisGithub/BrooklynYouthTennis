@@ -1,16 +1,25 @@
-import React, { FC, ReactNode } from 'react';
-import { makeStyles, useTheme, useMediaQuery, Button, Typography, Box } from '@material-ui/core';
-import Stack from '@mui/material/Stack';
-// import Button from '@mui/material/Button';
+import React from 'react'
+import Hero from './Hero'
+import Highlights from './Highlights/Highlights'
+import Programs from './Programs/Programs'
+import Skills from './Skills/Skills'
+// import Testimonials from './Testimonials/Testimonials'
+import Impact from './Impact/Impact'
+import Subscribe from './Subscribe/Subscribe'
 
-export default function Home() {
+function Home() {
   return (
     <>
-      <Stack spacing={2} direction="row">
-        <Button variant="text">Text</Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
-        </Stack>
-    </>
+      <Hero/>
+      <Highlights />
+      <Programs />
+      <Skills />
+      {/* <Testimonials /> */}
+      <Impact />
+      {/* <Sponsorships /> */}
+      <Subscribe />
+      </>
   );
 }
+
+export default Home;

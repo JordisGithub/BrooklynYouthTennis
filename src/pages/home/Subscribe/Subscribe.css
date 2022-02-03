@@ -1,0 +1,35 @@
+.subscribe{
+background-color: #C1F7D5;
+display: flex;
+padding: 100px;
+/* width: 85%; */
+}
+
+.subscribe h1 {
+font-family: PoynterOSDisp, sans-serif;
+color: #354463;
+width: 50%;
+padding: 20px;
+}
+
+.email_input{
+height: 48px;
+margin: auto;
+border: #354463 1pt solid;
+border-radius: 18px;
+width: 352px;
+font-family: komet, sans-serif;
+color: #354463;
+font-size: 20px;
+}
+
+.subscribe_button{
+background-color: #354463;
+color: white;
+height: 48px;
+font-family: PoynterOSDisp, sans-serif;
+font-size: 18px;
+width: 160px;
+border-radius: 18px;
+margin: auto;
+}
