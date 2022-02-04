@@ -29,6 +29,13 @@ export default function Programs() {
           <a href="/programs/communitylessons" className="programs_gridcard_button">Read More</a>
         </div>
 
+        <div className="programs_grid_card">
+          <div className="housing_img"></div>
+          <h1>Public Housing communities</h1>
+          <p>Sessions go for 90 minutes and are held on tennis courts at local parks. The program’s curriculum is tailored to accommodate different ages and skill levels. Incorporate life skills like teamwork + sportsmanship.</p>
+          <a href="/programs/communitylessons" className="programs_gridcard_button">Read More</a>
+        </div>
+
       </div>
 
 

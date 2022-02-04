@@ -12,12 +12,12 @@ function Home() {
     <>
       <Hero/>
       <Highlights />
-      {/* <Programs /> */}
-      {/* <Skills /> */}
+      <Programs />
+      <Skills />
       {/* <Testimonials /> */}
-      {/* <Impact /> */}
+      <Impact />
       {/* <Sponsorships /> */}
-      {/* <Subscribe /> */}
+      <Subscribe />
       </>
   );
 }

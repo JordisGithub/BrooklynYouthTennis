@@ -1,6 +1,8 @@
 .programs {
   background-color: #354463;
-  padding: 100px;
+  padding-left: 40px;
+  /* width: 100%;
+  overflow: hidden; */
 }
 
 .programs_title {
@@ -34,9 +36,9 @@
   /* border: solid 2px brown; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 60px;
+  grid-gap: 40px;
   width: 75%;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .programs_grid_card {
@@ -99,8 +101,12 @@
   height: 224px;
 }
 
-.tournament_img {
-  background-image: url("../../../images/tournament_img.png");
+.housing_img {
+  background-image: url("../../../images/publicHousing.jpeg");
   width: 320px;
   height: 224px;
+  object-fit: contain;
+  /* background-position: "center";
+  width: "100vw";
+  overflow: "hidden"; */
 }
