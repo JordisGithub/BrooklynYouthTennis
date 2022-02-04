@@ -1,41 +1,22 @@
 import React from 'react'
 import { makeStyles } from '@mui/styles';
-import HeroImage from '../../images/city_tennis_hero.png'
+import HeroImage from '../../images/city_tennis_hero.png';
+import { Grid } from '@mui/material';
 
 
 const useStyles = makeStyles({
   root: {},
-  heroContainer: {
-    // border: 'solid red 2pt',
-    padding: 0,
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
-    gridTemplateRows: '1fr 1fr 1fr',
-    height: '500px',
-    width: '100vw',
-    justifyContent: 'stretch',
-    overflow: 'hidden',
-   
-  },
   heroImage: {
-    // border: 'solid blue 2pt',
-    backgroundRepeat: 'no-repeat',
-    // backgroundSize: 'cover',
     backgroundPosition: 'center',
     width: '100vw',
-    // objectFit: 'cover',
+    objectFit: 'cover',
     overflow: 'hidden',
   },
-
   heroTextBlock: {
-    // border: 'solid green 2pt',
-    marginTop: '80px',
-    gridColumnStart: 1,
-    rowRowStart: 2,
-    marginLeft: '20px',
+    position: 'absolute',
+    top: '200px',
   },
   heroTitle: {
-    /* border: solid yellow 2pt; */
     fontFamily: 'komet, sans-serif',
     fontSize: '12px',
     fontWeight: '200',
@@ -53,7 +34,6 @@ const useStyles = makeStyles({
   
   
   heroSlogan: {
-    // border: 'solid pink 2pt',
     fontFamily: 'poynterOSDis, sans-serif',
     backgroundColor: 'white',
     color: '#354463',
@@ -62,7 +42,6 @@ const useStyles = makeStyles({
     padding: '35px 20px',
     marginTop: '-15px',
     width: '28vw',
-    // zIndex:' -1',
   },
 });
 
@@ -70,15 +49,16 @@ function Hero() {
   const classes = useStyles();
   return (
     <>
-    <div className={classes.heroContainer}>
-      <img src={HeroImage} alt="child plays tennis in brooklyn" className={classes.heroImage}/>
-        <div className={classes.heroTextBlock}>
-          <h2 className={classes.heroTitle}>The motto</h2>
-          <div className={classes.heroSlogan}>
-            Talk with your racquet, play with your heart.
-          </div>
-        </div>
-      </div>
+  
+      <Grid container spacing={3} alignItems="stretch">
+        <Grid item xs={12} sm={4}>
+            <img src={HeroImage} alt="child plays tennis in brooklyn" className={classes.heroImage}/>
+            <div className={classes.heroTextBlock}>
+              <h2 className={classes.heroTitle}>The motto</h2>
+              <div className={classes.heroSlogan}>Talk with your racquet, play with your heart.</div>
+            </div>
+        </Grid>
+    </Grid>
       </>
   );
 }
