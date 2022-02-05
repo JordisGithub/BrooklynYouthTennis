@@ -1,12 +1,12 @@
-import { Colors } from './colors';
+// import { Colors } from './colors';
 
-declare module '@material-ui/core/styles/createTheme' {
-  interface Theme {
-    colors: Colors;
-  }
+// declare module '@material-ui/core/styles/createTheme' {
+//   interface Theme {
+//     colors: Colors;
+//   }
 
-  //allow configuration using createTheme
-  interface ThemeOptions {
-    colors?: Colors;
-  }
-}
+//   //allow configuration using createTheme
+//   interface ThemeOptions {
+//     colors?: Colors;
+//   }
+// }

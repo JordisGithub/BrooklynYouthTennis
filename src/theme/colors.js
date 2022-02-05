@@ -3,4 +3,4 @@ export const colors = {
   white: '#ffffff',
 };
 
-export type Colors = typeof colors;
+// export type Colors = typeof colors;

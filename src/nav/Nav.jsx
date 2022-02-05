@@ -15,7 +15,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     '&.MuiPaper-root': {
        backgroundColor: 'white',
@@ -25,9 +25,13 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'row',
   },
-  brandTitle: {
+  logo: {
+    height: '50px',
     margin: '1rem',
-    height: '80px',
+    [theme.breakpoints.up('sm')]: {
+      margin: '1rem',
+      height: '80px',
+    },
   },
   navbarLinks: {
     '&.MuiButton-root': {
@@ -51,18 +55,7 @@ const useStyles = makeStyles({
       },
     },
   },
-  navbarButton: {
-    borderRadius: '25px',
-    backgroundColor: '#c1f7d5',
-    margin: 'auto',
-    textDecoration: 'none',
-    padding: '15px 30px',
-    color: '#354463',
-    fontFamily: 'PoynterOSDisp, sans-serif',
-    fontSize: '14px',
-    fontWeight: '800',
-  }
-});
+}));
 
 const pages = [
   <ListItem><a href="/about" >About Us</a></ListItem>,
@@ -96,7 +89,7 @@ function Nav() {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <a href="/"><img src={Logo} className={classes.brandTitle} alt="byta" /></a>
+            <a href="/"><img src={Logo} className={classes.logo} alt="byta" /></a>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -141,7 +134,7 @@ function Nav() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            <a href="/"><img src={Logo} className={classes.brandTitle} alt="byta" /></a>
+            <a href="/"><img src={Logo} className={classes.logo} alt="byta" /></a>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (

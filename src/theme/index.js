@@ -1,15 +1,19 @@
-// import { createTheme, ThemeOptions } from '@material-ui/core/styles';
-// import breakpoints from './breakpoints';
-// import { colors } from './colors';
+// import { createTheme } from '@material-ui/core/styles';
+import breakpoints from './breakpoints';
+import { colors } from './colors';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import { orange } from '@mui/material/colors';
 
-// export const themeOptions: ThemeOptions = {
-//   breakpoints: {
-//     values: breakpoints.values,
-//   },
-//   colors,
-// }
+const theme = createTheme({
+  status: {
+    danger: orange[500],
+  },
+  palette: {
+    white: 'white',
+    highlight: '#c1f7d5',
+    main: '#354463',
+  },
+});
 
-// const theme = createTheme(themeOptions);
-
-// export default theme;
+export default theme;
 
