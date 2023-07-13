@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
       color: '#354463',
       padding: '20px',
       fontSize: '40px',
+      [theme.breakpoints.down('md')]: {
+        fontSize: '20px',
+      },
       },
     },
     email_input: {
@@ -26,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
       color: '#354463',
       fontSize: '20px',
       marginBottom: '15px',
+      [theme.breakpoints.down('md')]: {
+        width: '80%',
+      },
     },
     subscribe_button: {
       backgroundColor: '#354463',

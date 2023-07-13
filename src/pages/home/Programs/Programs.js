@@ -35,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '100px',
     [theme.breakpoints.down('md')]: {
       padding: '50px 0 30px',
+      fontSize: '16px',
+      lineHeight: '24px',
+      marginBottom: '0px',
+      paddingTop: '30px',
     },
   },
   
@@ -79,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     [theme.breakpoints.down('md')]: {
-      height: '800px',
+      height: '300px',
     },
     },
   
@@ -89,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url("https://i.imgur.com/Ek4wD9J.jpg")`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    [theme.breakpoints.down('md')]: {
+      height: '300px',
+    },
     },
   
   adaptive_img: {
@@ -97,6 +104,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url("https://i.imgur.com/ssu7NXr.jpg")`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    [theme.breakpoints.down('md')]: {
+      height: '300px',
+    },
   },
 }))
 
