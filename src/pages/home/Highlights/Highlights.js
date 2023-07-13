@@ -51,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: '0.6px',
       display: 'flex',
       justifyContent: 'center',
+      [theme.breakpoints.down('md')]: {
+        fontSize: '18px',
+      },
     },
     '& p': {
       fontSize: '20px',
@@ -66,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '20px',
       textAlign: 'center',
       [theme.breakpoints.down('md')]: {
-        fontSize: '25px',
+        fontSize: '14px',
         marginTop: '0px',
       },
     },
