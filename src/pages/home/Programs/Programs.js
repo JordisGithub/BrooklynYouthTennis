@@ -35,10 +35,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '100px',
     [theme.breakpoints.down('md')]: {
       padding: '50px 0 30px',
-      fontSize: '16px',
-      lineHeight: '24px',
+      fontSize: '12px',
+      lineHeight: '18px',
       marginBottom: '0px',
       paddingTop: '30px',
+      width: '90vw',
     },
   },
   
@@ -84,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     [theme.breakpoints.down('md')]: {
       height: '300px',
+     
     },
     },
   
@@ -106,6 +108,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center',
     [theme.breakpoints.down('md')]: {
       height: '300px',
+      backgroundPosition: '40% 40%',
     },
   },
 }))
