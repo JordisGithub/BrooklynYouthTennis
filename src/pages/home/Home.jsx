@@ -1,8 +1,7 @@
 import React from 'react'
-import BYTAHero from './BYTAHero'
+import BYTAHero from './hero/BYTAHero'
 import Highlights from './Highlights/Highlights'
 import Programs from './Programs/Programs'
-import Skills from './Skills/Skills'
 import Subscribe from './Subscribe/Subscribe'
 
 function Home() {
@@ -11,7 +10,6 @@ function Home() {
       <BYTAHero/>
       <Highlights />
       <Programs />
-      <Skills />
       <Subscribe />
       </>
   );

@@ -79,10 +79,10 @@ const useStyles = makeStyles((theme) => ({
 
 const wave = keyframes`
   from {
-    transform: rotate(0deg);
+    transform: rotate(10deg);
   }
   to {
-    transform: rotate(-5deg);
+    transform: rotate(-10deg);
   }`
 
   // ----------------------------------------------------------------------
@@ -95,7 +95,7 @@ export const BYTAHero = () => {
               <Stack>
                 <div className={classes.heroTextBlock}>
                   <h2 className={classes.heroTitle}>The motto</h2>
-                  <div className={classes.heroSlogan}>Talk with your racquet, play with your heart.</div>
+                  <div className={classes.heroSlogan}>Talk with your racquet, play with your heart.fff</div>
                   <FavoriteIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
                   <FavoriteIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
                   <FavoriteIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>

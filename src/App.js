@@ -2,18 +2,18 @@ import React from "react";
 // import { Route, Switch } from "react-router";
 import Nav from './nav/Nav'
 import Home from './pages/home/Home';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import theme from "./theme";
 
 
 function App() {
   return (
-<>
-       <ThemeProvider theme={theme}>
+    <>
+      <ThemeProvider theme={theme}>
       <Nav />
       <Home />
       </ThemeProvider>
-      </>
+    </>
   );
 }
 
