@@ -1,7 +1,8 @@
 import { makeStyles } from '@mui/styles';
-import { keyframes } from '@emotion/react'
 import { Stack, Grid } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import { keyframes } from '@emotion/react'
+// import FavoriteIcon from '@mui/icons-material/Favorite';
+// import SportsTennisIcon from '@mui/icons-material/SportsTennis';
 
 
 // ----------------------------------------------------------------------
@@ -20,12 +21,12 @@ const useStyles = makeStyles((theme) => ({
   heroTextBlock: {
     padding: '50px 25px 0px',
     '& .MuiSvgIcon-root': {
-      animation: `${wave} 0.5s linear infinite alternate`,
-      animationDuration: '1s',
-      animationFillMode: 'backwards',
-      color: '#f20044',
-      width: '70px',
-      height: '70px',
+      // animation: `${wave} 0.5s linear infinite alternate`,
+      // animationDuration: '1s',
+      // animationFillMode: 'backwards',
+      // color: '#f20044',
+      // width: '70px',
+      // height: '70px',
     },     
     },
     heroTitle: {
@@ -45,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'poynterOSDis, sans-serif',
       backgroundColor: 'white',
       color: '#354463',
-      fontSize: '40px',
+      fontSize: '30px',
       fontWeight: '900',
       padding: '30px 0 0',
       [theme.breakpoints.up('md')]: {
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
          fontSize: '45px',
       },
       [theme.breakpoints.up('lg')]: {
-        fontSize: '4vw',
+        fontSize: '3vw',
       },
   },
   heroImage: {
@@ -77,13 +78,13 @@ const useStyles = makeStyles((theme) => ({
 
 // ----------------------------------------------------------------------
 
-const wave = keyframes`
-  from {
-    transform: rotate(10deg);
-  }
-  to {
-    transform: rotate(-10deg);
-  }`
+// const wave = keyframes`
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(-20deg);
+//   }`
 
   // ----------------------------------------------------------------------
 
@@ -95,11 +96,11 @@ export const BYTAHero = () => {
               <Stack>
                 <div className={classes.heroTextBlock}>
                   <h2 className={classes.heroTitle}>The motto</h2>
-                  <div className={classes.heroSlogan}>Talk with your racquet, play with your heart.fff</div>
-                  <FavoriteIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
-                  <FavoriteIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
-                  <FavoriteIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
-                  <FavoriteIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
+                  <div className={classes.heroSlogan}>Game, Set, Match! Brooklyn’s Youth Ace Their Skills with Free Tennis Lessons from BYTA</div>
+                  {/* <SportsTennisIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
+                  <SportsTennisIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
+                  <SportsTennisIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/>
+                  <SportsTennisIcon sx={{ animation: `${wave} 0.5s linear infinite alternate` }}/> */}
                 </div>           
               </Stack>
             </Grid>
