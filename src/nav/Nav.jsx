@@ -2,7 +2,6 @@ import React from 'react'
 import Logo from '../images/logo.JPG'
 import { makeStyles } from '@mui/styles';
 import ListItem from '@mui/material/ListItem';
-import Drawer from '@mui/material/Drawer';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -61,7 +60,7 @@ const pages = [
   <ListItem><a href="/about" >About Us</a></ListItem>,
   <ListItem><a href="/Programs" >Our Programs</a></ListItem>,
   <ListItem><a href="/getinvolved" >Get Involved</a></ListItem>,
-  <ListItem><a href="/contactus" >Contact Us</a></ListItem>,
+  // <ListItem><a href="/contactus" >Contact Us</a></ListItem>,
   <ListItem><a href="https://www.paypal.me/brooklynyouth" target="_blank" rel="noreferrer">Support Us</a></ListItem>
 ];
 
