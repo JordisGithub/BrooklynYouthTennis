@@ -1,9 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import { Stack, Grid } from '@mui/material';
-import { keyframes } from '@emotion/react'
-// import FavoriteIcon from '@mui/icons-material/Favorite';
-import SportsTennisIcon from '@mui/icons-material/SportsTennis';
-
+import { Grid } from '@mui/material';
 
 // ----------------------------------------------------------------------
 const useStyles = makeStyles((theme) => ({
