@@ -1,5 +1,5 @@
 import React from 'react'
-import BYTAHero from './Hero/BYTAHero'
+import BYTAHero from './hero/BYTAHero'
 import Highlights from './Highlights/Highlights'
 import Programs from './Programs/Programs'
 import Sponsorships from './Sponsorships/Sponsorships'
