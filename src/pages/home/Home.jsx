@@ -1,8 +1,10 @@
 import React from 'react'
 import BYTAHero from './hero/BYTAHero'
-import Highlights from './Highlights/Highlights'
-import Programs from './Programs/Programs'
-import Subscribe from './Subscribe/Subscribe'
+import Highlights from './highlights/Highlights'
+import Programs from './programs/Programs'
+import Subscribe from './subscribe/Subscribe'
+import Sponsorships from './sponsorships/Sponsorships'
+import FeaturedImages from './featuredImages/FeaturedImages'
 
 function Home() {
   return (
@@ -10,6 +12,8 @@ function Home() {
       <BYTAHero/>
       <Highlights />
       <Programs />
+      <Sponsorships />
+      <FeaturedImages />
       <Subscribe />
       </>
   );

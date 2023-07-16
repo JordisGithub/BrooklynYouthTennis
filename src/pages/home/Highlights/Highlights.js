@@ -3,11 +3,6 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   highlightsTitle: {
-    display: 'table-cell',
-    position: 'relative',
-    verticalAlign: 'middle',
-    left: '40vw',
-    top: '-5px',
     fontFamily: 'komet, sans-serif',
     fontSize: '12px',
     fontWeight: 200,
@@ -15,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     textTransform: 'uppercase',
     padding: '10px 25px',
-    textAlign: 'center',
     letterSpacing: '2px',
+    width: 'max-content',
+    margin: 'auto',
   },
   highlights: {
     backgroundColor: '#c1f7d5',

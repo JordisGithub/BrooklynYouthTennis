@@ -9,9 +9,6 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
   },
   programs_title: {
-    display: 'table-cell',
-    position: 'relative',
-    verticalAlign: 'middle',
     fontFamily: 'komet, sans-serif',
     fontSize: '12px',
     fontWeight: 400,
@@ -21,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px 25px',
     textAlign: 'center',
     letterSpacing: '2px',
+    margin: 'auto',
+    width: 'fit-content',
+    marginBottom: '40px',
   },
   programs_description: {
     color: '#ffffff',
@@ -29,16 +29,15 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     letterSpacing: '1.5px',
     lineHeight: '40px',
-    width: '70vw',
+    width: '90vw',
     margin: 'auto',
     marginBottom: '60px',
-    paddingTop: '100px',
     [theme.breakpoints.down('md')]: {
-      padding: '50px 0 30px',
+      padding: '0px 0 30px',
       fontSize: '12px',
       lineHeight: '18px',
       marginBottom: '0px',
-      paddingTop: '30px',
+      // paddingTop: '0px',
       width: '90vw',
     },
   },
@@ -119,14 +118,14 @@ const Programs = () => {
   return (
     <div  className={classes.programs}>
       <div className={classes.programs_title}>
-        Youth Tennis Programs
+        Tennis Programs
       </div>
-      {/* <div className={classes.programs_description}>
-      Brooklyn Youth Tennis Association helps young people develop into socially responsible, engaged citizens by providing year-round tennis instruction. At low or no cost, we aim to facilitate the development of social and emotional skill-building minds into physically active contributing members of society. BYTA partners with public schools where we assist with general and special education students.
-      </div> */}
       <div className={classes.programs_description}>
-        The mission of the Brooklyn Youth Tennis Association (BYTA) is to provide access to high-quality tennis instruction and programming to children in Brooklyn, regardless of their background or financial situation. Our goal is to instill a lifelong love of tennis in our young players, while promoting physical fitness, social skills, and character development. We are committed to creating a safe, supportive, and inclusive environment where all children can thrive, both on and off the court. Through our programs, we aim to inspire our players to reach their full potential, both as athletes and as members of their communities.
+        Mission: To partner with school age children from the ages of 5-17 to develop mentally strong, healthy and physically active kids, by providing quality tennis instruction at low or no cost 
       </div>
+        <div className={classes.programs_description}>
+      Brooklyn Youth Tennis Association helps young people develop into socially responsible, engaged citizens by providing year-round tennis instruction. At low or no cost, we aim to facilitate the development of social and emotional skill-building minds into physically active contributing members of society. BYTA partners with public schools where we assist with general and special education students.
+      </div> 
       <div className={classes.programs_grid}>
         <div className={classes.programs_grid_card}>
           <div className={classes.afterschool_img}/>
