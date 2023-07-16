@@ -1,5 +1,4 @@
 import * as React from 'react';
-import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { makeStyles } from '@mui/styles';
 
