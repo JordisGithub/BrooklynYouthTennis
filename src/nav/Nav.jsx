@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
       color: '#354463',
       fontSize: '14px',
       fontFamily: 'komet, sans-serif',
+      '& a': {
+        textDecorationLine: 'none',
+      },
       '&:hover': {
         backgroundColor: '#c1f7d5',
       },  
@@ -51,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'PoynterOSDisp, sans-serif',
         fontSize: '14px',
         fontWeight: '800',
+        marginRight: 0,
       },
     },
   },
@@ -60,7 +64,7 @@ const pages = [
   <ListItem><a href="/about" >About Us</a></ListItem>,
   <ListItem><a href="/Programs" >Our Programs</a></ListItem>,
   <ListItem><a href="/getinvolved" >Get Involved</a></ListItem>,
-  // <ListItem><a href="/contactus" >Contact Us</a></ListItem>,
+  <ListItem><a href="/contactus" >Contact Us</a></ListItem>,
   <ListItem><a href="https://www.paypal.me/brooklynyouth" target="_blank" rel="noreferrer">Support Us</a></ListItem>
 ];
 
@@ -119,7 +123,6 @@ function Nav() {
                 display: { xs: 'block', md: 'none' },
               }}
               >
-                {/* burger menu */}
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}  >
                   <Typography textAlign="center">{page}</Typography>

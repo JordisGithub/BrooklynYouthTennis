@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-      <Nav />
-      <Home />
+        <Nav />
+        <Home />
       </ThemeProvider>
     </>
   );
