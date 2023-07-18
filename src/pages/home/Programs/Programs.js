@@ -25,10 +25,10 @@ const useStyles = makeStyles((theme) => ({
   programs_description: {
     color: '#ffffff',
     fontFamily: 'PoynterOSDisp, sans-serif',
-    fontSize: '30px',
+    fontSize: '20px',
     fontWeight: 400,
-    letterSpacing: '1.5px',
-    lineHeight: '40px',
+    letterSpacing: '1.2px',
+    lineHeight: '30px',
     width: '90vw',
     margin: 'auto',
     marginBottom: '60px',
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     gridTemplateRows: 'auto',
     '& h1': {
       fontFamily: 'PoynterOSDisp, sans-serif',
-      fontSize: '28px',
+      fontSize: '20px',
       fontWeight: 400,
       width: '94%',
       margin: '20px auto 0',
@@ -78,37 +78,29 @@ const useStyles = makeStyles((theme) => ({
   },
   afterschool_img: {
     overflow: 'hidden',
-    height: '500px',
-    backgroundImage: `url("https://i.imgur.com/tbPOZIY.jpg")`,
+    height: '300px',
+    backgroundImage: `url("https://i.imgur.com/02iokib.jpg")`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    [theme.breakpoints.down('md')]: {
-      height: '300px',
-     
-    },
+    backgroundPosition: '25% 30%',
+    backgroundSize: '130%',
     },
   
   community_img: {
     overflow: 'hidden',
-    height: '500px',
+    height: '300px',
     backgroundImage: `url("https://i.imgur.com/Ek4wD9J.jpg")`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    [theme.breakpoints.down('md')]: {
-      height: '300px',
-    },
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
     },
   
   adaptive_img: {
     overflow: 'hidden',
-    height: '500px',
-    backgroundImage: `url("https://i.imgur.com/ssu7NXr.jpg")`,
+    height: '300px',
+    backgroundImage: `url("https://i.imgur.com/qltRxlk.jpg")`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    [theme.breakpoints.down('md')]: {
-      height: '300px',
-      backgroundPosition: '40% 40%',
-    },
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
   },
 }))
 
