@@ -1,47 +1,48 @@
 import React, { useState } from "react";
+import { TextField, Button, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 
 const useStyles = makeStyles((theme) => ({
   subscribe: {
     backgroundColor: '#C1F7D5',
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '50px',
+    padding: '10px 30px',
     alignItems: 'center',
+    [theme.breakpoints.up('md')]: {
+      padding: '50px',
+    },
     '& h1': {
       fontFamily: 'PoynterOSDisp, sans-serif',
       color: '#354463',
       padding: '20px',
-      fontSize: '40px',
-      [theme.breakpoints.down('md')]: {
-        fontSize: '20px',
-      },
+      fontSize: '20px',
+      textAlign: 'center',
+      margin: 'auto',
+      [theme.breakpoints.up('md')]: {
+        fontSize: '40px',
       },
     },
-    email_input: {
-      height: '48px',
-      margin: 'auto',
-      border: '#354463 1pt solid',
-      borderRadius: '18px',
-      width: '352px',
-      fontFamily: 'komet, sans-serif',
-      color: '#354463',
-      fontSize: '20px',
-      marginBottom: '15px',
-      [theme.breakpoints.down('md')]: {
-        width: '80%',
+    '& #msg': {
+      fontSize: '18px',
+      fontFamily: 'PoynterOSDisp, sans-serif',
+      color: '#940C1C',
+      [theme.breakpoints.up('md')]: {
+        fontSize: '30px',
       },
+    },
+    },
+  inputs: {
+    display: 'grid',
+    gridGap: '8px',
+    alignItems: 'center',
+    width: '400px',
+    margin: 'auto',
+    [theme.breakpoints.up('md')]: {
+      width: '500px',
+    },
     },
     subscribe_button: {
-      backgroundColor: '#354463',
-      color: 'white',
       height: '48px',
-      fontƒamily: 'PoynterOSDisp, sans-serif',
-      fontSize: '18px',
-      width: '160px',
-      borderRadius: '18px',
-      margin: 'auto',
     }
 }))
 
@@ -49,6 +50,7 @@ const Subscribe = () => {
   const classes = useStyles();
 
   const [formData, setFormData] = useState({})
+  const msg = document.getElementById("msg")
 
   const {
     REACT_APP_PRIVATE_KEY,
@@ -73,7 +75,7 @@ const Subscribe = () => {
       return result;
     } catch (e) {
       console.error("Error: ", e);
-    }
+    } 
   };
 
   const handleInputChange = (event) =>{
@@ -84,17 +86,23 @@ const Subscribe = () => {
     event.preventDefault()
     appendSpreadsheet(formData)
     console.log(formData)
+    msg.innerHTML = "Thank you for Subscribing!"
+    setTimeout(() => {
+      msg.innerHTML = ""
+    }, 8000);
   }
 
   return (
     <div className={classes.subscribe}>
       <h1>Subscribe to stay up to date with all news and events.</h1>
       <form onSubmit={handleSubmit}>
-        <input className={classes.email_input} name="name" type="text" placeholder="Enter your name" required onChange={handleInputChange} />
-        <input className={classes.email_input} name="email" type="email" placeholder="Enter your email" required onChange={handleInputChange} />
-        <button className={classes.subscribe_button} type="submit">Submit</button>
+        <div className={classes.inputs} >  
+          <TextField id="outlined-basic" label="Name" variant="filled" name="name" required onChange={handleInputChange} />
+          <TextField id="outlined-basic" label="Email" variant="filled" name="email" required onChange={handleInputChange} />
+          <Button className={classes.subscribe_button} variant="contained" type="submit">Submit</Button>
+        </div>
       </form>
-      <span>Thank you for Subscribing</span>
+      <Typography id="msg"></Typography>
     </div>
   )
 }

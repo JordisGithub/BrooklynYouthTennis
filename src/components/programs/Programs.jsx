@@ -20,24 +20,24 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: '2px',
     margin: 'auto',
     width: 'fit-content',
-    marginBottom: '40px',
+    marginBottom: '20px',
+    [theme.breakpoints.up('md')]: {
+      marginBottom: '40px',
+    },
   },
   programs_description: {
     color: '#ffffff',
     fontFamily: 'PoynterOSDisp, sans-serif',
-    fontSize: '20px',
     fontWeight: 400,
     letterSpacing: '1.2px',
-    lineHeight: '30px',
-    width: '90vw',
     margin: 'auto',
-    marginBottom: '60px',
-    [theme.breakpoints.down('md')]: {
-      padding: '0px 0 30px',
-      fontSize: '12px',
-      lineHeight: '18px',
-      marginBottom: '0px',
-      width: '90vw',
+    fontSize: '12px',
+    lineHeight: '14px',
+    marginBottom: '20px',
+    width: '90vw',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '20px',
+      lineHeight: '24px',
     },
   },
   
@@ -66,13 +66,16 @@ const useStyles = makeStyles((theme) => ({
     '& p': {
       fontWeight: 300,
       fontFamily: 'komet, sans-serif',
-      fontSize: '16px',
+      fontSize: '14px',
       width: '90%',
       margin: 'auto',
-      padding: '20px',
-      lineHeight: '25px',
+      paddingBottom: '10px',
+      lineHeight: '18px',
       color: '#354463',
       marginTop: '10px',
+      [theme.breakpoints.up('md')]: {
+        padding: '20px',
+      },
     },
   },
   afterschool_img: {
@@ -120,7 +123,7 @@ const Programs = () => {
       <div className={classes.programs_grid}>
         <div className={classes.programs_grid_card}>
           <div className={classes.afterschool_img}/>
-          <h1>BYTA AfterSchool Programs</h1>
+          <h1>BYTA After School Programs</h1>
           <p>The Brooklyn Youth Tennis Association (BYTA) offers an after-school tennis program for children attending Public School 11 and Public School 20 in Brooklyn. Our program provides free tennis instruction to young players of all skill levels, using a variety of drills and activities to develop tennis skills, physical fitness, and social connections. We aim to create a safe and supportive environment where every child can thrive and develop a lifelong love of tennis.</p>
         </div>
         <div className={classes.programs_grid_card}>

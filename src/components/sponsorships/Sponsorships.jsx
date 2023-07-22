@@ -4,7 +4,7 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   sponsorships: {
-    backgroundImage: 'linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url("https://i.imgur.com/c5nkh6E.jpg")',
+    backgroundImage: 'linear-gradient(rgba(70, 66, 159, 0.5), rgba(187, 43, 107, 0.5)), url("https://i.imgur.com/c5nkh6E.jpg")',
     width: '100vw',
     backgroundSize: 'cover',
   },
@@ -25,13 +25,14 @@ const useStyles = makeStyles((theme) => ({
   
   sponsorships_description: {
     fontFamily: 'PoynterOSDisp, sans-serif',
-    fontSize: '44px',
+    fontSize: '20px',
     color: 'white',
-    width: '80%',
+    width: '90%',
     margin: 'auto',
-    marginTop:' 60px',
-    [theme.breakpoints.down('md')]: {
-      fontSize: '30px',
+    marginTop:' 20px',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '44px',
+      paddingTop: '30px',
     },
   },
   
@@ -39,26 +40,32 @@ const useStyles = makeStyles((theme) => ({
     width: '90%',
     display: 'flex',
     margin: 'auto',
-    marginTop: '40px',
+    marginTop: '20px',
     justifyContent: 'space-evenly',
-    alignItems: 'center',
-    zIndex: 10,
   },
   
   sponsor1: {
-  backgroundImage: 'url("https://i.imgur.com/1Ylb1xc.png")',
-  width: '350px',
-  height: '200px',
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  },
+    backgroundImage: 'url("https://i.imgur.com/1Ylb1xc.png")',
+    width: '200px',
+    height: '100px',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+      [theme.breakpoints.up('md')]: {
+        width: '350px',
+        height: '200px',
+      },
+    },
   sponsor2: {
     backgroundImage: 'url("https://i.imgur.com/fcuFe1p.png")',
-    width: '350px',
-    height: '200px',
-    backgroundRepeat: 'no-repeat',
+    width: '200px',
+    height: '100px',
     backgroundSize: 'contain',
-  },
+    backgroundRepeat: 'no-repeat',
+      [theme.breakpoints.up('md')]: {
+        width: '350px',
+        height: '200px',
+      },
+    },
 }))
 
 
