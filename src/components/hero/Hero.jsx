@@ -1,3 +1,4 @@
+import React from 'react'
 import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material';
 
@@ -37,19 +38,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-
-export const BYTAHero = () => {
+const Hero = () => {
   const classes = useStyles();
   return (     
-          <div className={classes.root}>
-            <div className={classes.heroTextBlock}>
-              <Typography>BROOKLYN youth tennis association</Typography>
-              {/* <Typography>Game, Set, Match! Brooklyn’s Youth Ace Their Skills with Free Tennis Lessons from BYTA</Typography> */}
-            </div>           
-          </div>
+    <div className={classes.root}>
+      <div className={classes.heroTextBlock}>
+        <Typography>BROOKLYN youth tennis association</Typography>
+      </div>           
+    </div>
   );
 }
 
-export default BYTAHero
+export default Hero
 
 
