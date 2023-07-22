@@ -47,13 +47,34 @@ const useStyles = makeStyles((theme) => ({
 
 const Subscribe = () => {
   const classes = useStyles();
+  function Submit(e) {
+    const formEle = document.querySelector("form")
+    e.preventDefault()
+    console.log('submitted')
+}
+
   return (
     <div className={classes.subscribe}>
       <h1>Subscribe to stay up to date with all news and events.</h1>
-      <input className={classes.email_input} type="text" placeholder="Enter your email address" name="mail" required></input>
-      <button className={classes.subscribe_button} type="submit" value="Subscribe">Submit</button>
+      {/* <form name="submit-to-google-sheet"> */}
+      <form onSubmit={(e) => Submit(e)}>
+        <input className={classes.email_input} name="Name" type="text" placeholder="Name" required/>
+        <input className={classes.email_input} name="Email" type="email" placeholder="email" required/>
+        <button className={classes.subscribe_button} type="submit">Submit</button>
+      </form>
+      <span>Thank you for Subscribing</span>
     </div>
   )
 }
 
 export default Subscribe
+
+//  <stripe-buy-button
+//   buy-button-id="buy_btn_1NV6KiI2WadLprKhD5FbFxU1"
+//   publishable-key="pk_test_51NV5m9I2WadLprKhXoLzP0JQyb6S5AAzSlWI3ehpsWbnpuerBsa1ul9L41cBlj5wOXEHV53CtNzQp7qy3gsjYx9k00fyppbNoE"
+// >Donate
+//         </stripe-buy-button>
+//         <stripe-buy-button
+//       buy-button-id="'{{BUY_BUTTON_ID}}'"
+//       publishable-key="pk_test_51NV5m9I2WadLprKhXoLzP0JQyb6S5AAzSlWI3ehpsWbnpuerBsa1ul9L41cBlj5wOXEHV53CtNzQp7qy3gsjYx9k00fyppbNoE"
+//     ></stripe-buy-button> 

@@ -40,10 +40,9 @@ const FeaturedImages = () => {
       {itemData.map((item) => (
         <ImageListItem key={item.img} className={classes.images}>
           <img
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+            src={item.img}
+            srcSet={item.img}
             alt={item.title}
-            loading="lazy"
           />
         </ImageListItem>
       ))}

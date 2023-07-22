@@ -30,8 +30,6 @@ const useStyles = makeStyles((theme) => ({
     width: '80%',
     margin: 'auto',
     marginTop:' 60px',
-    // backgroundColor: '#354463',
-    // opacity: '.5',
     [theme.breakpoints.down('md')]: {
       fontSize: '30px',
     },

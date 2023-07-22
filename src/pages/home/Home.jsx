@@ -1,15 +1,10 @@
 import React from 'react'
-import BYTAHero from './hero/BYTAHero'
-import Highlights from './Highlights/Highlights'
-import Programs from './Programs/Programs'
-import Sponsorships from './Sponsorships/Sponsorships'
-import FeaturedImages from './featuredImages/FeaturedImages'
-import Subscribe from './Subscribe/Subscribe'
+import { Hero, Highlights, Programs, Sponsorships, FeaturedImages, Subscribe } from '../../components'
 
 function Home() {
   return (
     <>
-      <BYTAHero/>
+      <Hero/>
       <Highlights />
       <Programs />
       <Sponsorships />

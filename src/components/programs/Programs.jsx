@@ -37,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '12px',
       lineHeight: '18px',
       marginBottom: '0px',
-      // paddingTop: '0px',
       width: '90vw',
     },
   },
