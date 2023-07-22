@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '18px',
       fontFamily: 'PoynterOSDisp, sans-serif',
       color: '#940C1C',
+      textAlign: 'center',
       [theme.breakpoints.up('md')]: {
         fontSize: '30px',
       },
