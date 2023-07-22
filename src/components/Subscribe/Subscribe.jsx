@@ -1,6 +1,6 @@
-import React from 'react'
-// import './Subscribe.css'
+import React, { useState } from "react";
 import { makeStyles } from '@mui/styles';
+import { GoogleSpreadsheet } from 'google-spreadsheet'
 
 const useStyles = makeStyles((theme) => ({
   subscribe: {
@@ -47,19 +47,51 @@ const useStyles = makeStyles((theme) => ({
 
 const Subscribe = () => {
   const classes = useStyles();
-  function Submit(e) {
-    const formEle = document.querySelector("form")
-    e.preventDefault()
-    console.log('submitted')
-}
+
+  const [formData, setFormData] = useState({})
+
+  const {
+    REACT_APP_PRIVATE_KEY,
+    REACT_APP_CLIENT_EMAIL,
+    REACT_APP_SPREADSHEET_ID,
+    REACT_APP_SHEET_ID
+  } = process.env
+
+  const doc = new GoogleSpreadsheet(REACT_APP_SPREADSHEET_ID);
+
+  const appendSpreadsheet = async (row) => {
+    console.log(REACT_APP_CLIENT_EMAIL);
+    try {
+      await doc.useServiceAccountAuth({
+        client_email: REACT_APP_CLIENT_EMAIL,
+        private_key: REACT_APP_PRIVATE_KEY,
+      });
+      await doc.loadInfo();
+      console.log(doc.loadInfo());
+      const sheet = doc.sheetsById[REACT_APP_SHEET_ID];
+      const result = await sheet.addRow(row);
+      return result;
+    } catch (e) {
+      console.error("Error: ", e);
+    }
+  };
+
+  const handleInputChange = (event) =>{
+    setFormData({...formData,[event.target.name]:event.target.value})
+  }
+
+  const handleSubmit = (event) =>{
+    event.preventDefault()
+    appendSpreadsheet(formData)
+    console.log(formData)
+  }
 
   return (
     <div className={classes.subscribe}>
       <h1>Subscribe to stay up to date with all news and events.</h1>
-      {/* <form name="submit-to-google-sheet"> */}
-      <form onSubmit={(e) => Submit(e)}>
-        <input className={classes.email_input} name="Name" type="text" placeholder="Name" required/>
-        <input className={classes.email_input} name="Email" type="email" placeholder="email" required/>
+      <form onSubmit={handleSubmit}>
+        <input className={classes.email_input} name="name" type="text" placeholder="Enter your name" required onChange={handleInputChange} />
+        <input className={classes.email_input} name="email" type="email" placeholder="Enter your email" required onChange={handleInputChange} />
         <button className={classes.subscribe_button} type="submit">Submit</button>
       </form>
       <span>Thank you for Subscribing</span>
@@ -68,13 +100,3 @@ const Subscribe = () => {
 }
 
 export default Subscribe
-
-//  <stripe-buy-button
-//   buy-button-id="buy_btn_1NV6KiI2WadLprKhD5FbFxU1"
-//   publishable-key="pk_test_51NV5m9I2WadLprKhXoLzP0JQyb6S5AAzSlWI3ehpsWbnpuerBsa1ul9L41cBlj5wOXEHV53CtNzQp7qy3gsjYx9k00fyppbNoE"
-// >Donate
-//         </stripe-buy-button>
-//         <stripe-buy-button
-//       buy-button-id="'{{BUY_BUTTON_ID}}'"
-//       publishable-key="pk_test_51NV5m9I2WadLprKhXoLzP0JQyb6S5AAzSlWI3ehpsWbnpuerBsa1ul9L41cBlj5wOXEHV53CtNzQp7qy3gsjYx9k00fyppbNoE"
-//     ></stripe-buy-button> 
