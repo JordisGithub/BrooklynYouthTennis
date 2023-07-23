@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
       color: '#354463',
       marginTop: '10px',
       [theme.breakpoints.up('md')]: {
-        padding: '20px',
+        padding: '0 20px 20px',
       },
     },
   },
