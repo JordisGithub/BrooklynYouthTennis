@@ -1,0 +1,7 @@
+export { default as AboutUs } from './about-us/AboutUs'
+export { default as ContactUs } from './contact-us/ContactUs'
+export { default as DonatePage } from './donate-page/DonatePage'
+export { default as GetInvolved } from './get-involved/GetInvolved'
+export { default as Home } from './home/Home'
+export { default as OurPrograms } from './our-programs/OurPrograms'
+export { default as Register } from './register/Register'
