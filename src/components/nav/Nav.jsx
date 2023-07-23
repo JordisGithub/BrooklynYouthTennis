@@ -61,10 +61,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const pages = [
-  <ListItem><a href="/about" >About Us</a></ListItem>,
-  <ListItem><a href="/Programs" >Our Programs</a></ListItem>,
-  <ListItem><a href="/getinvolved" >Get Involved</a></ListItem>,
-  <ListItem><a href="/contactus" >Contact Us</a></ListItem>,
+  <ListItem><a href="/about-us" >About Us</a></ListItem>,
+  <ListItem><a href="/our-programs" >Our Programs</a></ListItem>,
+  <ListItem><a href="/get-involved" >Get Involved</a></ListItem>,
+  <ListItem><a href="/contact-us" >Contact Us</a></ListItem>,
+  <ListItem><a href="/register" >Register</a></ListItem>,
   <ListItem><a href="https://www.paypal.me/brooklynyouth" target="_blank" rel="noopener noreferrer" >Support Us</a></ListItem>
 ];
 
