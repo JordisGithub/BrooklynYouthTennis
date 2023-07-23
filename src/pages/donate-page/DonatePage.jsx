@@ -4,7 +4,7 @@ import React from 'react'
 function DonatePage() {
   return (
     <>
-      Hello World
+      Donate Form Placeholder
       </>
   );
 }

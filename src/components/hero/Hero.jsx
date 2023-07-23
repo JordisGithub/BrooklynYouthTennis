@@ -2,7 +2,6 @@ import React from 'react'
 import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material';
 
-// ----------------------------------------------------------------------
 const useStyles = makeStyles((theme) => ({
   root: {
     background: `linear-gradient(to bottom, transparent 25%, #354463), url("https://i.imgur.com/Xl7YNyd.jpg") no-repeat center center`,

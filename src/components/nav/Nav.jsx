@@ -1,17 +1,9 @@
 import React from 'react'
 import Logo from '../../images/logo.JPG'
 import { makeStyles } from '@mui/styles';
-import ListItem from '@mui/material/ListItem';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import { MenuItem, Button, Container, Menu, Typography, IconButton, Toolbar, Box, AppBar, ListItem } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -61,11 +53,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const pages = [
-  <ListItem><a href="/about-us" >About Us</a></ListItem>,
-  <ListItem><a href="/our-programs" >Our Programs</a></ListItem>,
-  <ListItem><a href="/get-involved" >Get Involved</a></ListItem>,
-  <ListItem><a href="/contact-us" >Contact Us</a></ListItem>,
-  <ListItem><a href="/register" >Register</a></ListItem>,
+  <Link to="/about-us"> About Us</Link>,
+  <Link to="/our-programs">Our Programs</Link>,
+  <Link to="/get-involved">Get Involved</Link>,
+  <Link to="/contact-us">Contact Us</Link>,
+  <Link to="/register">Register</Link>,
   <ListItem><a href="https://www.paypal.me/brooklynyouth" target="_blank" rel="noopener noreferrer" >Support Us</a></ListItem>
 ];
 
