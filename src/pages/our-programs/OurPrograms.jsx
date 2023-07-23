@@ -1,12 +1,12 @@
 import React from 'react'
 // import { Hero, Highlights, Programs, Sponsorships, FeaturedImages, Subscribe } from '../../components'
 
-const ContactUs = () => {
+const OurPrograms = () => {
   return (
     <>
-      Hello World
+      Our Programs
       </>
   );
 }
 
-export default ContactUs;
+export default OurPrograms;
