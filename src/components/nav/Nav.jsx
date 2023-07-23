@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../images/logo.JPG'
+import Logo from '../../images/logo.JPG'
 import { makeStyles } from '@mui/styles';
 import ListItem from '@mui/material/ListItem';
 import AppBar from '@mui/material/AppBar';

@@ -16,43 +16,45 @@ const useStyles = makeStyles((theme) => ({
   },
   highlights: {
     backgroundColor: '#c1f7d5',
-    paddingBottom: '40px',
+    paddingBottom: '20px',
+    [theme.breakpoints.up('md')]: {
+      paddingBottom: '40px',
+    },
   },
   highlightsGrid: {
     width: '90%',
     display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateColumns: '1fr',
     margin: 'auto',
     paddingTop: '40px',
     gridGap: '20px',
     [theme.breakpoints.down('lg')]: {
-      paddingTop: '0px',
+      paddingTop: '20px',
     },
-    [theme.breakpoints.down('md')]: {
-      gridTemplateColumns: '1fr',
+    [theme.breakpoints.up('md')]: {
+      gridTemplateColumns: 'repeat(3, 1fr)',
     },
   },
   highlightsGridWrapper: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '0 15px',
-   
-
     '& h1': {
       fontFamily: 'PoynterOSDisp, sans-serif',
       color: '#354463',
-      fontSize: '25px',
+      fontSize: '14px',
       fontWeight: 600,
-      lineHeight:  '40px',
+      height: 'auto',
       letterSpacing: '0.6px',
-      display: 'flex',
-      justifyContent: 'center',
-      [theme.breakpoints.down('md')]: {
+      textAlign: 'center',
+      [theme.breakpoints.up('md')]: {
         fontSize: '18px',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '20px',
       },
     },
     '& p': {
-      fontSize: '20px',
+      fontSize: '14px',
       display: 'inline-flex',
       justifyContent: 'center',
       color: '#354463',
@@ -61,12 +63,11 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
       width: '100%',
       height: 'auto',
-      letterSpacing: '1px',
-      marginTop: '20px',
+      letterSpacing: '1px',   
       textAlign: 'center',
-      [theme.breakpoints.down('md')]: {
-        fontSize: '14px',
-        marginTop: '0px',
+      [theme.breakpoints.up('lg')]: {
+        marginTop: '10px',
+        fontSize: '20px',
       },
     },
   },
