@@ -2,6 +2,7 @@ import * as React from 'react';
 import { makeStyles } from '@mui/styles';
 import GetInvolvedCard from './GetInvolvedCard';
 import { Stack } from '@mui/material';
+import { getInvolvedData } from '../../data';
 
 const useStyles = makeStyles((theme) => ({
     cardContainer: {
@@ -30,11 +31,19 @@ const GetInvolvedOptions = () => {
     const classes = useStyles();
     return (
         <div className={classes.cardContainer} >
-            <GetInvolvedCard className={classes.card} />
-            <GetInvolvedCard className={classes.card} />
-            <GetInvolvedCard className={classes.card} />
-            <GetInvolvedCard className={classes.card} />
-            <GetInvolvedCard className={classes.card} />
+            {getInvolvedData.map((data) => {
+                return (
+                    <GetInvolvedCard
+                        className={classes.card}
+                        key={data.id}
+                        title={data.title}
+                        caption={data.caption}
+                        imgUrl={data.imgUrl}
+                        buttonName={data.buttonName}
+                        buttonLink={data.buttonLink}
+                    />
+                )
+            })}
         </div>
     )
 }

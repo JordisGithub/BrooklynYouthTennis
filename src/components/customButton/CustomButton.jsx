@@ -2,6 +2,11 @@ import React from 'react'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
+    // For resetting the link style
+    linkReset: {
+        textDecoration: 'none',
+        color: 'inherit',
+    },
     // For resetting the button style
     buttonReset: {
         border: 'none',
@@ -9,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
         cursor: 'pointer',
         padding: '10px 20px',
     },
+
     // For customizing for reusing the button
     customButton: {
         backgroundColor: theme.palette.highlight,
@@ -25,9 +31,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function CustomButton({ text }) {
+export default function CustomButton({ text, buttonLink }) {
     const classes = useStyles();
     return (
-        <button className={`${classes.customButton}  ${classes.buttonReset}`}>{text}</button>
+        <button className={`${classes.customButton}  ${classes.buttonReset}`}><a href={buttonLink} className={classes.linkReset}>{text}</a></button>
     )
 }
