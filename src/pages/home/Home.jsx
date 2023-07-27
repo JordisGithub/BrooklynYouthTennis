@@ -4,7 +4,7 @@ import { Hero, Highlights, Programs, Sponsorships, FeaturedImages, Subscribe } f
 function Home() {
   return (
     <>
-      <Hero/>
+      <Hero headerName={`BROOKLYN youth tennis association`} imgUrl={`https://i.imgur.com/Xl7YNyd.jpg`}/>
       <Highlights />
       <Programs />
       <Sponsorships />
