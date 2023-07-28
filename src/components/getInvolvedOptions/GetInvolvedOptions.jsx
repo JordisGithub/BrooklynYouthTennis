@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { makeStyles } from '@mui/styles';
 import GetInvolvedCard from './GetInvolvedCard';
-import { Stack } from '@mui/material';
 import { getInvolvedData } from '../../data';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         gap: '20px',
 
         //Size
-        width: '80%',
+        width: '85%',
         maxWidth: '1000px',
 
         //Position
