@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router";
-import Nav from './components/nav/Nav.jsx'
-import { AboutUs, ContactUs, DonatePage, GetInvolved, Home, OurPrograms, Register } from './pages';
 import { ThemeProvider } from '@mui/material/styles';
+import { AboutUs, ContactUs, DonatePage, GetInvolved, Home, OurPrograms, Register } from './pages';
 import theme from "./theme/index.jsx";
+import Nav from './components/nav/Nav.jsx'
+import Footer from "./components/footer/Footer.jsx";
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
           <Route path="/donate-page" element={<DonatePage />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/our-programs" element={<OurPrograms />} />
-          <Route path="/register" element={ <Register />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
+        <Footer />
       </ThemeProvider>
     </>
   );

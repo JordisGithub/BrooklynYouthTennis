@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Hero, Highlights, Programs, Sponsorships, FeaturedImages, Subscribe, GetInvolvedOptions, UpComingPrograms } from '../../components'
+import { Hero, Highlights, Programs, Sponsorships, FeaturedImages, Subscribe, GetInvolvedOptions, UpComingPrograms, FAQ } from '../../components'
 
 const GetInvolved = () => {
   return (
@@ -8,6 +8,7 @@ const GetInvolved = () => {
       <Hero headerName={`Get Involved`} imgUrl={`https://i.imgur.com/pb4AULg.jpeg`} headerCaption={`Make a positive impact on our tennis community`} />
       <GetInvolvedOptions />
       <UpComingPrograms />
+      <FAQ />
     </>
   );
 }

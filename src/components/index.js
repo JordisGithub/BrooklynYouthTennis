@@ -11,3 +11,4 @@ export { default as Subscribe } from "./Subscribe/Subscribe";
 export { default as GetInvolvedOptions } from "./getInvolvedOptions/GetInvolvedOptions";
 export { default as UpComingPrograms } from "./upComingPrograms/UpComingPrograms";
 export { default as UpComingProgramsCard } from "./upComingPrograms/UpComingProgramsCard";
+export { default as FAQ } from "./FAQ/FAQ";

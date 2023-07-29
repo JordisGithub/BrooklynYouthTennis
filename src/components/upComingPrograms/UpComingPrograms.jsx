@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   header: {
     paddingBottom: '20px',
     fontSize: '2rem',
+    textAlign: 'center',
   },
   programsContainer: {
     // General Layout
