@@ -36,8 +36,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'grid',
     gridGap: '8px',
     alignItems: 'center',
-    width: '400px',
+    width: '80%',
     margin: 'auto',
+    marginBottom: '20px',
     [theme.breakpoints.up('md')]: {
       width: '500px',
     },
