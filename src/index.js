@@ -1,6 +1,7 @@
-import React from 'react';
+import { FC } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
+import { ThemeProvider, StyledEngineProvider, CssBaseline } from '@mui/material';
 import './index.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 
