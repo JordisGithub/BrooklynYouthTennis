@@ -1,5 +1,6 @@
 
 export { default as FeaturedImages } from './featuredImages/FeaturedImages'
+export { default as Footer } from './footer/Footer'
 export { default as Hero } from './hero/Hero'
 export { default as Highlights } from './highlights/Highlights'
 export { default as Programs } from './programs/Programs'
