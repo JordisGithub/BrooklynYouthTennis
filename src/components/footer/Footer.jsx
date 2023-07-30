@@ -79,7 +79,7 @@ const Footer = () => {
           <h4>BYTA</h4>
           <Link><a href="">About Us</a></Link>
           <Link><a href="">Get Involved</a></Link>
-          <Link><a href="">Donate</a></Link>
+          <Link><a href="">Donate Here</a></Link>
         </div>
         <div className="BYTAfooter-socialIcons">
           <h4>Follow Us</h4>
