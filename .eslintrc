@@ -1,0 +1,53 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".ts", ".tsx", ".jsx", ".d.ts"]
+      }
+    }
+  },
+  "plugins": ["react", "testing-library", "jest-dom", "@typescript-eslint"],
+  "rules": {
+    "quotes": ["error", "single", "avoid-escape"],
+    "import/prefer-default-export": "off",
+    "class-methods-use-this": "off",
+    //typescript
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "js": "never", "ts": "never", "tsx": "never", "jsx": "never" }
+    ],
+    "no-shadow": "off",
+    "no-param-reassign": 0,
+    "no-use-before-define": "off",
+    "default-param-last": 0,
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-use-before-define": ["error"]
+  }
+}
