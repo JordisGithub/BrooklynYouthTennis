@@ -15,6 +15,9 @@ const theme = createTheme({
       xl: 1441, //1441
     },
   },
+  typography: {
+    fontFamily: 'komet, sans-serif',
+  }
 });
 
 export default theme;
