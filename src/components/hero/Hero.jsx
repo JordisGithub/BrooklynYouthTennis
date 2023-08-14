@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
+import { inherits } from "util";
 
 const useStyles = makeStyles((theme) => ({
   root: ({ imgUrl }) => ({
@@ -42,17 +43,28 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       letterSpacing: "-1px",
     },
+
+    "& a": {
+      color: "white"
+    }
   },
 }));
 
-const Hero = ({ imgUrl, headerName, headerCaption }) => {
+const Hero = ({ imgUrl, headerName, headerCaption, openHoursCaption, emailCaption }) => {
   const classes = useStyles({ imgUrl });
   return (
     <div className={classes.root}>
       <div className={classes.heroTextBlock}>
         <Typography variant="h1">{headerName}</Typography>
         {headerCaption && (
-          <Typography variant="caption" sx={{fontWeight: "400"}}>{headerCaption}</Typography>
+          <Typography variant="caption" sx={{ fontWeight: "400" }}>{headerCaption}</Typography>
+        )}
+        {openHoursCaption && (
+          <Typography variant="caption" sx={{ fontWeight: "600" }} >{openHoursCaption}</Typography>
+        )}
+        {emailCaption && (
+
+          <Typography variant="caption" sx={{ fontWeight: "400", pt: "1rem" }}>Email: <a href="">{emailCaption}</a></Typography>
         )}
       </div>
     </div>
