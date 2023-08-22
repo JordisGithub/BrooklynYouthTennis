@@ -1,10 +1,10 @@
 import { styled } from '@mui/system';
-import { Container } from '@mui/material';
-import React from 'react';
-import { ThemeProvider } from '@mui/styles';
-import theme from '../../theme';
+import React, { useState } from 'react';
+
+//Data
 import { Mail, Phone } from '../../images';
-import CustomButton from '../customButton/CustomButton';
+// Component
+import SendMessageModalDialgoue from './SendMessageModalDialgoue';
 
 const StyledContactUsContainer = styled('div')(({ theme }) => ({
     width: '100%',
@@ -19,7 +19,7 @@ const StyledContactUsContainer = styled('div')(({ theme }) => ({
         backgroundColor: theme.palette.white,
         padding: '2rem',
         borderRadius: '20px',
-        transform: "translateY(-70px)"
+        transform: 'translateY(-70px)',
     },
     '& .title': {
         position: 'relative',
@@ -39,27 +39,60 @@ const StyledContactUsContainer = styled('div')(({ theme }) => ({
     '& .contact-options': {
         paddingTop: '2rem',
         display: 'flex',
-        flexDirection: "column",
-        gap: "2rem",
+        flexDirection: 'column',
+        gap: '2rem',
         justifyContent: 'space-around',
         [theme.breakpoints.up('md')]: {
-            flexDirection: "row"
-        }
+            flexDirection: 'row',
+        },
     },
 
     '& .svg-icon-container': {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "70px",
-        margin: "auto",
-        padding: "2rem",
-        borderRadius: "50%",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '70px',
+        margin: 'auto',
+        marginBottom: '1rem',
+        padding: '2rem',
+        borderRadius: '50%',
         backgroundColor: theme.palette.highlight,
     },
+    "& .contact-type-information": {
+        fontSize: "0.8rem",
+        padding: "1rem 0",
+    }
 }));
 
+const ContactButton = styled("button")(({ theme }) => ({
+    // reset button
+    border: 'none',
+    outline: 'none',
+    cursor: 'pointer',
+    padding: '10px 20px',
+    //styling
+    backgroundColor: theme.palette.main,
+    borderRadius: '15px',
+    fontSize: "1rem",
+    color: "white",
+    fontWeight: 'bold',
+    transition: "background-color 0.3s ease-in-out, color 0.3s ease-in-out",
+    "&:hover, &:focus": {
+        backgroundColor: theme.palette.highlight,
+        color: theme.palette.main,
+        boxShadow: `inset 0 0 0 1px ${theme.palette.main}`,
+
+    }
+
+}))
+
+
+
 export default function ContactUsContainer() {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     return (
         <StyledContactUsContainer>
             <div className="main-border">
@@ -70,20 +103,25 @@ export default function ContactUsContainer() {
                             <Phone className="svg-icon" />
                         </div>
                         <h3>By Phone</h3>
-                        <p>1-718-789-5084</p>
-                        <p>Mon-Sun (8am - 10pm)</p>
-                        <CustomButton text="Call Now" />
+                        <div className="contact-type-information">
+                            <p style={{ fontWeight: "bold" }}>1-718-789-5084</p>
+                            <p>Mon-Sun (8am - 10pm)</p>
+                        </div>
+                        <ContactButton>Call Now</ContactButton>
                     </div>
                     <div>
                         <div className="svg-icon-container">
                             <Mail />
                         </div>
                         <h3>By Email</h3>
-                        <p>brooklynyouthtennis@gmail.com</p>
-                        <CustomButton text="Send Message" />
+                        <div className="contact-type-information">
+                            <p>brooklynyouthtennis@gmail.com</p>
+                        </div>
+                        <ContactButton onClick={() => handleOpen()}>Send Message</ContactButton>
                     </div>
                 </div>
             </div>
+            {/* <SendMessageModalDialgoue open={open} closeFunction={handleClose} /> */}
         </StyledContactUsContainer>
     );
 }

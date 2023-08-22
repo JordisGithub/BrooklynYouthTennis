@@ -34,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
 export default function CustomButton({ text, buttonLink }) {
     const classes = useStyles();
     return (
-        <button className={`${classes.customButton}  ${classes.buttonReset}`}><a href={buttonLink} className={classes.linkReset}>{text}</a></button>
+        <>
+            <button className={`${classes.customButton}  ${classes.buttonReset}`}><a href={buttonLink} className={classes.linkReset}>{text}</a></button>
+        </>
     )
 }
