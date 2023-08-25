@@ -11,7 +11,7 @@ const StyledContactUsContainer = styled('div')(({ theme }) => ({
     textAlign: 'center',
     margin: 'auto',
     paddingBottom: '2rem',
-    fontFamily: 'komet, sans-serif',
+    fontFamily: theme.typography.fontFamily,
     backgroundColor: theme.palette.main,
     '& .main-border': {
         width: '60%',
@@ -121,7 +121,7 @@ export default function ContactUsContainer() {
                     </div>
                 </div>
             </div>
-            {/* <SendMessageModalDialgoue open={open} closeFunction={handleClose} /> */}
+            <SendMessageModalDialgoue open={open} closeFunction={handleClose} />
         </StyledContactUsContainer>
     );
 }
